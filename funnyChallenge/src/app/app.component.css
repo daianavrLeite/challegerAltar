@@ -1,0 +1,85 @@
+.container1{
+    padding: 30px 60px;
+    position: relative;
+    background: inherit;
+    width: 100%;
+}
+.container1 {
+    padding: 30px 60px;
+    position: relative;
+    background: inherit;
+    width: 50%;
+  }
+  
+  .container1.left {
+    left: 0;
+  }
+
+  .container1.right {
+    left: 50%;
+  }
+.title-funny-challenger{
+    text-align: right;
+    font-family: cursive;
+}
+.timeline{
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px 0;
+
+}
+.container1 .icons {
+    position: absolute;
+    display: inline-block;
+    height: 30px;
+    min-width: 60px;
+    top: 45px;
+    padding: 6px 8px;
+    background: #E94B3C;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    z-index: -1;
+  }
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  background: #E94B3C;
+  top: 30%;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2.5px;
+}
+.container1.left .icons {
+    right: -86px;
+    border-radius: 25px;
+  }
+  
+  .container1.right .icons {
+    left: -86px;
+    border-radius: 25px;
+  }
+
+  .content{
+    background: #ffffff;
+    position: relative;     
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.1);
+  }
+  .title{
+      background-color:#E94B3C ;
+      padding: 5px;
+      color: #fff;
+      border-radius: 500px 0 700px 700px;  
+  }
+  .title-right{
+    background-color:#E94B3C ;
+    padding: 5px;
+    color: #fff;
+    border-radius:700px 700px 500px 0;  
+  }
+
+  
+  
