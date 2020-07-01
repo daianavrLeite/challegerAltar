@@ -9,9 +9,7 @@ export class AppService {
 
 
     public itens: Timeline[] = [];
-    constructor(
-        private http: HttpClient
-      ) { }
+    constructor( ) { }
 
     public addItem(text:AbstractControl, textTitle:AbstractControl) {
         let itemIimeline: Timeline = new Timeline(

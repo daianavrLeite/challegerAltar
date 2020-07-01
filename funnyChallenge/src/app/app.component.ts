@@ -28,13 +28,12 @@ export class AppComponent {
       'text': ['', Validators.compose([Validators.required])]
   })
 }
- add() {
+ add() {  
   this.text = this.form.controls['text'].value;
   this.textTitle = this.form.controls['textTitle'].value;
   this.serviceTimeline.addItem(this.textTitle, this.text);
   this.itemTimeline = this.serviceTimeline.getItemTimeline();
   this.listItensTimeline$ = this.getAllitems();
-  console.log("obsv", this.listItensTimeline$)
   }
   
 getAllitems() {

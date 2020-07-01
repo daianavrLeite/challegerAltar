@@ -2,15 +2,15 @@
     <div class="row">
         <div class=" col-4"></div>
         <div class=" col-4">
-            <h2 class="title-funny-challenger">Funny challenger</h2>
+            <h1 class="title-funny-challenger">Funny challenger</h1>
         </div>
         <div class=" col-4"></div>
     </div>
     <div class="box-add ">
-        <form [formGroup] ="form " class="row">
+        <form #f="ngForm" [formGroup] ="form " class="row">
             <div class="form-group col-4">
                 <label for="input-title">Add a Title</label>
-                <input  class="form-control" id ="textTitle"formControlName="textTitle">
+                <input  class="form-control" id ="textTitle"formControlName="textTitle" >
             </div>
             <div class="form-group col-4">
                 <label for="input-text">Add a Text</label>
@@ -18,14 +18,14 @@
             </div>
 
             <div class=" col-4">
-                <button class="btn btn-primary" (click)="add()">Add</button>
+                <button class="btn btn-primary" (click)="add()" [disabled]="!f.valid" >Add</button>
             </div>
         </form>
     </div>
 </div>
 <div class="container">
     <div class="timeline"  *ngFor= "let item of listItensTimeline$ | async, let i = index ">
-            <div *ngIf="i%2==0">
+            <div *ngIf="i%2==0; else template">
                 <div class="container1 left">
                     <span class="icons"><i class="icon fa fa-home"></i></span>
                     <div class="content">
@@ -36,7 +36,7 @@
                     </div>
             </div>
         </div>
-        <div *ngIf="i%2!=0 ">
+        <ng-template #template>
             <div class=" container1 right">
                 <span class="icons"><i class="icon fa fa-user"></i></span>
                 <div class="content">
@@ -45,10 +45,10 @@
                        {{item.text}}
                     </p>
                 </div>
-        </div>
-    </div>
-      
+            </div>
 
+        </ng-template>
+    
     </div>
 
     
